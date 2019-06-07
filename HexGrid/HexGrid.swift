@@ -4,7 +4,7 @@ import Morton
 
 // TODO: port region functionality
 
-public struct Point {
+public struct Point: Equatable, Hashable {
     public let x: Double
     public let y: Double
 
@@ -14,7 +14,7 @@ public struct Point {
     }
 }
 
-public struct Hex {
+public struct Hex: Equatable, Hashable {
     public let q: Int64
     public let r: Int64
 
@@ -24,7 +24,7 @@ public struct Hex {
     }
 }
 
-public struct FractionalHex {
+public struct FractionalHex: Equatable, Hashable {
     public let q: Double
     public let r: Double
 
@@ -52,7 +52,7 @@ public struct FractionalHex {
     }
 }
 
-public struct Orientation {
+public struct Orientation: Equatable, Hashable {
     let f: [Double]
     let b: [Double]
     let startAngle: Double
